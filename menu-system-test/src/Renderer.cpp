@@ -15,6 +15,8 @@ Renderer::Renderer(Message& msg, const int& width, const int& height)
 	mRenderer = SDL_CreateRenderer(mWindow, -1, SDL_RENDERER_ACCELERATED);
 	if (!mRenderer)
 		mMsg.fatalError("Call to SDL_CreateRenderer failed (" + std::string(SDL_GetError()) + ")");
+
+	SDL_RenderSetLogicalSize(mRenderer, 1920, 1080);
 }
 
 Renderer::~Renderer()

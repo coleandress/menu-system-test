@@ -8,6 +8,8 @@ int main(int, char**)
 {
 	const int SCREEN_WIDTH = 1280;
 	const int SCREEN_HEIGHT = 720;
+	const int LOGICAL_WIDTH = 1920;
+	const int LOGICAL_HEIGHT = 1080;
 
 	Message msg;
 	Renderer renderer{ msg, SCREEN_WIDTH, SCREEN_HEIGHT };
@@ -61,48 +63,48 @@ int main(int, char**)
 		// Draw everything else
 		//renderer.fillRect(BUTTON_1, 0, 255, 0, 255);
 		//renderer.fillRect(BUTTON_2, 0, 0, 255, 255);
-		bg.render(0, 0, renderer.getWidth(), renderer.getHeight());
+		bg.render(0, 0, LOGICAL_WIDTH, LOGICAL_HEIGHT);
 
 		title.render(
-			renderer.getWidth() / 2 - title.getWidth() / 4,
-			(renderer.getHeight() / 2 - title.getHeight() / 4) - 200,
-			title.getWidth() / 2,
-			title.getHeight() / 2
+			LOGICAL_WIDTH / 2 - title.getWidth() / 2,
+			(LOGICAL_HEIGHT / 2 - title.getHeight() / 2) - 300,
+			title.getWidth(),
+			title.getHeight()
 		);
 
 		button1.render(
-			renderer.getWidth() / 2 - button1.getWidth() / 4,
-			(renderer.getHeight() / 2 - button1.getHeight() / 4) - 50,
-			button1.getWidth() / 2,
-			button1.getHeight() / 2
+			LOGICAL_WIDTH / 2 - button1.getWidth() / 2,
+			(LOGICAL_HEIGHT / 2 - button1.getHeight() / 2) - 50,
+			button1.getWidth(),
+			button1.getHeight()
 		);
 
 		button1.render(
-			renderer.getWidth() / 2 - button1.getWidth() / 4,
-			(renderer.getHeight() / 2 - button1.getHeight() / 4) + 25,
-			button1.getWidth() / 2,
-			button1.getHeight() / 2
+			LOGICAL_WIDTH / 2 - button1.getWidth() / 2,
+			(LOGICAL_HEIGHT / 2 - button1.getHeight() / 2) + 75,
+			button1.getWidth(),
+			button1.getHeight()
 		);
 
 		button1.render(
-			renderer.getWidth() / 2 - button1.getWidth() / 4,
-			(renderer.getHeight() / 2 - button1.getHeight() / 4) + 100,
-			button1.getWidth() / 2,
-			button1.getHeight() / 2
+			LOGICAL_WIDTH / 2 - button1.getWidth() / 2,
+			(LOGICAL_HEIGHT / 2 - button1.getHeight() / 2) + 200,
+			button1.getWidth(),
+			button1.getHeight()
 		);
 
 		button1.render(
-			renderer.getWidth() / 2 - button1.getWidth() / 4,
-			(renderer.getHeight() / 2 - button1.getHeight() / 4) + 175,
-			button1.getWidth() / 2,
-			button1.getHeight() / 2
+			LOGICAL_WIDTH / 2 - button1.getWidth() / 2,
+			(LOGICAL_HEIGHT / 2 - button1.getHeight() / 2) + 325,
+			button1.getWidth(),
+			button1.getHeight()
 		);
 
 		button1.render(
-			renderer.getWidth() / 2 - button1.getWidth() / 4,
-			(renderer.getHeight() / 2 - button1.getHeight() / 4) + 250,
-			button1.getWidth() / 2,
-			button1.getHeight() / 2
+			LOGICAL_WIDTH / 2 - button1.getWidth() / 2,
+			(LOGICAL_HEIGHT / 2 - button1.getHeight() / 2) + 450,
+			button1.getWidth(),
+			button1.getHeight()
 		);
 
 		renderer.present();
