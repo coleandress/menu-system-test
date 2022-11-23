@@ -1,0 +1,2 @@
+[2022-11-21 08-59-52] Call to SDL_CreateWindow failed ()
+[2022-11-22 21-39-38] Failed to load image [assets/img/Title_PlaceholderV1.pn]!  SDL_Image Error: (Couldn't open assets/img/Title_PlaceholderV1.pn)
